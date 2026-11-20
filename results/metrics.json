@@ -1,0 +1,187 @@
+{
+  "labels": [
+    "H",
+    "D",
+    "A"
+  ],
+  "split": {
+    "train": [
+      "2000-07-28",
+      "2021-06-30",
+      184582
+    ],
+    "val": [
+      "2021-07-01",
+      "2022-06-30",
+      12698
+    ],
+    "test": [
+      "2022-07-01",
+      "2025-06-01",
+      33237
+    ]
+  },
+  "features": [
+    "elo_home",
+    "elo_away",
+    "elo_diff",
+    "form3_home",
+    "form5_home",
+    "form3_away",
+    "form5_away",
+    "home_gf_l5",
+    "home_ga_l5",
+    "home_points_l5",
+    "home_gf_l10",
+    "home_ga_l10",
+    "home_points_l10",
+    "home_shots_for_l5",
+    "home_shots_against_l5",
+    "home_target_for_l5",
+    "home_target_against_l5",
+    "home_corners_for_l5",
+    "home_corners_against_l5",
+    "home_n_prev",
+    "home_rest_days",
+    "home_venue_points_l5",
+    "home_h2h_points_l5",
+    "away_gf_l5",
+    "away_ga_l5",
+    "away_points_l5",
+    "away_gf_l10",
+    "away_ga_l10",
+    "away_points_l10",
+    "away_shots_for_l5",
+    "away_shots_against_l5",
+    "away_target_for_l5",
+    "away_target_against_l5",
+    "away_corners_for_l5",
+    "away_corners_against_l5",
+    "away_n_prev",
+    "away_rest_days",
+    "away_venue_points_l5",
+    "away_h2h_points_l5",
+    "points_diff_l5",
+    "goal_diff_l5",
+    "points_diff_l10",
+    "goal_diff_l10"
+  ],
+  "temperatures": {
+    "logistic_regression": 1.0636389414440763,
+    "random_forest": 0.9650132419095218,
+    "logistic_regression_with_odds": 1.00907156258485,
+    "lstm": 0.9748048699524413
+  },
+  "results": {
+    "always_home": {
+      "accuracy": 0.4383,
+      "macro_f1": 0.2032,
+      "log_loss": 1.0741,
+      "brier": 0.6498,
+      "predicted_draw_share": 0.0
+    },
+    "bookmaker_odds": {
+      "accuracy": 0.504,
+      "macro_f1": 0.3726,
+      "log_loss": 1.0008,
+      "brier": 0.5983,
+      "predicted_draw_share": 0.002
+    },
+    "logistic_regression": {
+      "accuracy": 0.4932,
+      "macro_f1": 0.3671,
+      "log_loss": 1.0175,
+      "brier": 0.6095,
+      "predicted_draw_share": 0.0036,
+      "confusion_matrix": [
+        [
+          11483,
+          37,
+          3048
+        ],
+        [
+          5851,
+          39,
+          2840
+        ],
+        [
+          5028,
+          42,
+          4869
+        ]
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.4901,
+      "macro_f1": 0.3522,
+      "log_loss": 1.0185,
+      "brier": 0.6104,
+      "predicted_draw_share": 0.0,
+      "confusion_matrix": [
+        [
+          12361,
+          0,
+          2207
+        ],
+        [
+          6586,
+          0,
+          2144
+        ],
+        [
+          6012,
+          0,
+          3927
+        ]
+      ]
+    },
+    "logistic_regression_with_odds": {
+      "accuracy": 0.5046,
+      "macro_f1": 0.3822,
+      "log_loss": 1.001,
+      "brier": 0.5985,
+      "predicted_draw_share": 0.0106,
+      "confusion_matrix": [
+        [
+          11644,
+          119,
+          2805
+        ],
+        [
+          5760,
+          127,
+          2843
+        ],
+        [
+          4832,
+          107,
+          5000
+        ]
+      ]
+    },
+    "lstm": {
+      "accuracy": 0.492,
+      "macro_f1": 0.3591,
+      "log_loss": 1.0168,
+      "brier": 0.6091,
+      "predicted_draw_share": 0.0014,
+      "confusion_matrix": [
+        [
+          12021,
+          16,
+          2531
+        ],
+        [
+          6282,
+          14,
+          2434
+        ],
+        [
+          5607,
+          15,
+          4317
+        ]
+      ]
+    }
+  }
+}
